@@ -1,0 +1,15 @@
+; author: Thomas Hintz
+; email: t@thintz.com
+; license: bsd
+
+(compile -s -O2 -d1 hmac.scm -j hmac)
+(compile -s hmac.import.scm -O2 -d0)
+(compile -c -O2 -d1 hmac.scm -unit hmac -j hmac)
+
+(install-extension
+  'hmac
+  ; Files to install for your extension:
+  '("hmac.o" "hmac.so" "hmac.import.so")
+  ; Assoc list with properties for your extension:
+  '((version 1)
+    (static "hmac.o"))) ;; for static linking

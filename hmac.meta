@@ -1,0 +1,15 @@
+; author: Thomas Hintz
+; email: t@thintz.com
+; license: bsd
+
+(
+(license "BSD")
+
+(category cryptography)
+
+(needs message-digest-port srfi-4-utils)
+
+(test-depends test sha1 string-utils)
+
+(author "Thomas Hintz")
+(synopsis "HMAC provides a HMAC using the message-digest interface."))
