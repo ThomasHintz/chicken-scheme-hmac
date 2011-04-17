@@ -1,4 +1,4 @@
-(repo git "git://example.com/{egg-name}.git")   ; optional
+(repo git "git://github.com/ThomasHintz/chicken-scheme-{egg-name}.git")   ; optional
 
-(uri targz "http://example.com/{egg-name}/releases/{egg-name}-{egg-release}.tar.gz")
+(uri targz "https://github.com/ThomasHintz/chicken-scheme-{egg-name}/tarball/{egg-release}")
 (release "1")
