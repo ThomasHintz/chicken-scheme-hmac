@@ -3,7 +3,7 @@
 ; license: bsd
 
 (use test)
-(use sha1 string-utils)
+(use sha1 string-utils hmac)
 
 (test-group "HMAC"
             (test "Short Key and Message"

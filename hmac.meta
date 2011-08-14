@@ -7,7 +7,7 @@
 
 (category cryptography)
 
-(needs message-digest-port srfi-4-utils)
+(needs message-digest srfi-4-utils)
 
 (test-depends test sha1 string-utils)
 
