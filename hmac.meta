@@ -5,7 +5,7 @@
 (
 (license "BSD")
 
-(category cryptography)
+(category crypt)
 
 (needs message-digest srfi-4-utils)
 
