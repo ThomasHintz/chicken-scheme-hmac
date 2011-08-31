@@ -7,7 +7,7 @@
 
 (category crypt)
 
-(needs message-digest srfi-4-utils)
+(needs message-digest)
 
 (test-depends test sha1 string-utils)
 
