@@ -11,5 +11,5 @@
   ; Files to install for your extension:
   '("hmac.o" "hmac.so" "hmac.import.so")
   ; Assoc list with properties for your extension:
-  '((version 6)
+  '((version 7)
     (static "hmac.o"))) ;; for static linking
