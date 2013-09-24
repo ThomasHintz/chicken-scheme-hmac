@@ -8,7 +8,6 @@
 (import scheme chicken srfi-4 srfi-13)
 (use message-digest-port)
 
-; taken from example at http://wiki.call-cc.org/drupal-xml-rpc
 (define (hmac key digest-primitive #!optional (block-size 64))
   (when (> (string-length key) block-size)
     (set! key (call-with-output-digest digest-primitive (cut display key <>) 'string)))
@@ -16,6 +15,15 @@
   (let ((ipad (string-map (lambda (c) (integer->char (bitwise-xor (char->integer c) #x36))) key))
 	(opad (string-map (lambda (c) (integer->char (bitwise-xor (char->integer c) #x5c))) key)))
     (lambda (message)
-      (call-with-output-digest digest-primitive (cut display (string-append opad (call-with-output-digest digest-primitive (cut display (string-append ipad message) <>) 'string)) <>) 'string))))
+      (call-with-output-digest
+        digest-primitive
+        (cut display
+             (string-append opad
+                            (call-with-output-digest
+                              digest-primitive
+                              (cut display (string-append ipad message) <>)
+                              string))
+             <>)
+        'string))))
 
 )
