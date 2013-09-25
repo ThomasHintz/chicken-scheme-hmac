@@ -22,7 +22,7 @@
                             (call-with-output-digest
                               digest-primitive
                               (cut display (string-append ipad message) <>)
-                              string))
+                              'string))
              <>)
         'string))))
 
