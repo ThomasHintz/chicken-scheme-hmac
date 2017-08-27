@@ -5,7 +5,7 @@
 (module hmac
   (hmac hmac-primitive)
 
-(import scheme chicken lolevel srfi-13)
+(import scheme chicken srfi-13)
 (use message-digest-basic message-digest-item message-digest-update-item)
 
 (define (hmac-primitive key digest-primitive)
